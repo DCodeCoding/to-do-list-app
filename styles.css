@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-do-container {
+  height: 600px;
+  width: 600px;
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-heading {
+  margin: 10px 0;
+}
+
+.form-container {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.form-container input {
+  font-size: 18px;
+  padding: 6px;
+}
+
+.submit-btn {
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
