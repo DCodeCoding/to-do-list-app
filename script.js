@@ -2,7 +2,7 @@ const input = document.getElementsByClassName("input-box");
 const form = document.getElementsByClassName("form-container");
 const toDoItem = document.getElementsByClassName("to-do-list");
 
-form[0].onsubmit = function trying(event) {
+form[0].onsubmit = function submitForm(event) {
   event.preventDefault();
   const toDoName = input[0].value;
   const singleToDo = document.createElement("ul");
