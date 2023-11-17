@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-container {
@@ -13,16 +16,17 @@
 }
 
 .to-do-container {
-  height: 600px;
-  width: 600px;
-  background-color: purple;
+  min-height: 600px;
+  padding: 90px 200px;
+  background-color: grey;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 5px;
 }
 
 .main-heading {
-  margin: 10px 0;
+  margin: 30px 0;
 }
 
 .form-container {
@@ -37,9 +41,14 @@
   padding: 6px;
 }
 
+.input-box {
+  border-radius: 5px;
+}
+
 .submit-btn {
-  padding: 4px 10px;
+  padding: 4px 16px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .to-do-list {
@@ -47,4 +56,19 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+}
+
+.single-to-do {
+  display: flex;
+  width: 290px;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.delete-buttons {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }

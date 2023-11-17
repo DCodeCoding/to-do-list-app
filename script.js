@@ -10,5 +10,31 @@ form[0].onsubmit = function submitForm(event) {
   toDoItem[0].append(singleToDo);
   singleToDo.append(listToDo);
   listToDo.append(toDoName);
+  singleToDo.classList.add("single-to-do");
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("delete-buttons");
+  const deleteButtonText = document.createTextNode("delete");
+  deleteButton.append(deleteButtonText);
+  singleToDo.append(deleteButton);
+  const deleteButtons = document.getElementsByClassName("delete-buttons");
+  for (let i = 0; i < deleteButtons.length; i++) {
+    deleteButtons[i].onclick = function (event) {
+      const parentNode = event.target.parentNode;
+      parentNode.remove();
+    };
+  }
+
+  const markedToDos = document.getElementsByClassName("single-to-do");
+  for (let i = 0; i < markedToDos.length; i++) {
+    markedToDos[i].onclick = function (event) {
+      const toDoMarked = event.target;
+      if (toDoMarked.style.textDecoration === "line-through") {
+        toDoMarked.style.textDecoration = "none";
+      } else {
+        toDoMarked.style.textDecoration = "line-through";
+      }
+    };
+  }
+
   input[0].value = "";
 };
